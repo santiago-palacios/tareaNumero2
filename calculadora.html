@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi calculadora</title>
+</head>
+
+<body>
+    <h1>Mi calculadora</h1>
+    <p>Seleccione la operación a realizar:</p>
+    <fieldset id="radiosFieldset">
+        <input type="radio" id="sumaRadio" name="operacion" value="suma" checked>
+        <label for="sumaRadio">Suma</label>
+
+        <input type="radio" id="restaRadio" name="operacion" value="resta">
+        <label for="restaRadio">Resta</label>
+
+        <input type="radio" id="multiplicacionRadio" name="operacion" value="multiplicacion">
+        <label for="multiplicacionRadio">Multiplicación</label>
+
+        <input type="radio" id="divisionRadio" name="operacion" value="division">
+        <label for="divisionRadio">División</label>
+    </fieldset>
+    <hr>
+    <p>Ingrese los números de la operación:</p>
+    <fieldset id="numerosFieldset">
+        <label for="numero1Number">Primer número:</label>
+        <input type="number" min="0" max="9" value="0" id="numero1Number">
+
+        <label for="numero2Number">Segundo número:</label>
+        <input type="number" min="0" max="9" value="0" id="numero2Number">
+    </fieldset>
+    <hr>
+    <div id="calcularDiv" style="display: block;">
+        <button onclick="calcular()">Calcular</button>
+    </div>
+    <div id="limpiarDiv" style="display: none;">
+        <button onclick="limpiar()">Limpiar</button>
+    </div>
+
+    <hr>
+    <div id="resultadoDiv" style="display:none;">
+        <label for="resultadoNumber" style="font-size:medium;"><b>Resultado:</b></label>
+        <input type="number" disabled id="resultadoNumber">
+    </div>
+    <hr>
+<script type="text/javascript" src="scriptCalculadora.js"></script>
+</body>
+<footer>
+    <p>Copyright &copy; Santiago Palacios Tororo <script>document.write(new Date().getFullYear())</script>. Todos los derechos reservados.</p>
+</footer>
+</html>
